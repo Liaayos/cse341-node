@@ -1,0 +1,19 @@
+{
+  "name": "cse341-project-1",
+  "version": "1.0.0",
+  "description": "My firts project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liaayos/cse341-project-1.git"
+  },
+  "author": "Lia Ayos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liaayos/cse341-project-1/issues"
+  },
+  "homepage": "https://github.com/Liaayos/cse341-project-1#readme"
+}

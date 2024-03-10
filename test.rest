@@ -2,9 +2,14 @@
 #Get all users
 GET http://localhost:3000/contacts/
 
+###Get all users from render
+GET https://cse341-project-1-29rq.onrender.com/api-docs/#/Users/get_contacts_
 
 ### Get contact by id
 GET http://localhost:3000/contacts/65e40c790e57f9e26c81a40e HTTP/1.1
+
+### Get contact by id from render
+GET https://cse341-project-1-29rq.onrender.com/api-docs/#/Users/get_contacts__id_
 
 
 ###Create contact
@@ -19,9 +24,32 @@ Content-Type: application/json
   "birthday": "1990-03-07"
 }
 
+###Create contact from render
+POST https://cse341-project-1-29rq.onrender.com/api-docs/#/Users/post_contacts_
+Content-Type: application/json
+
+{
+  "firstName": "Zury",
+  "lastName": "Gaitan",
+  "email": "zurycanto@unal.edu.co",
+  "favoriteColor": "white",
+  "birthday": "1990-03-07"
+}
 
 ###Update contact
-PUT http://localhost:3000/contacts/65e40c790e57f9e26c81a40e HTTP/1.1
+PUT http://localhost:3000/contacts/65e40c790e57f9e26c81a40e
+Content-Type: application/json
+
+{
+  "firstName": "Juancho",
+  "lastName": "Gaitan",
+  "email": "jdgaitanf@unal.edu.co",
+  "favoriteColor": "white",
+  "birthday": "1990-03-07"
+}
+
+###Update contact from render
+PUT https://cse341-project-1-29rq.onrender.com/api-docs/#/Users/put_contacts__id_
 Content-Type: application/json
 
 {
@@ -35,3 +63,6 @@ Content-Type: application/json
 
 ###Delete contact
 DELETE http://localhost:3000/contacts/65ecf92678571e7e7053cbf7
+
+###Delete contact
+DELETE https://cse341-project-1-29rq.onrender.com/api-docs/#/Users/delete_contacts__id_

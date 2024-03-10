@@ -50,7 +50,11 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/components/schemas/contact" }
+            }
           }
         }
       },
@@ -89,7 +93,8 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "schema": { "$ref": "#/components/schemas/contact" }
           }
         }
       },

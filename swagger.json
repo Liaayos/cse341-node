@@ -1,4 +1,28 @@
 {
+  "components": {
+    "schemas": {
+      "contact": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "example": "string"
+          },
+          "lastName": {
+            "example": "string"
+          },
+          "email": {
+            "example": "string"
+          },
+          "favoriteColor": {
+            "example": "string"
+          },
+          "birthday": {
+            "example": "string"
+          }
+        }
+      }
+    }
+  },
   "swagger": "2.0",
   "info": {
     "title": "Users Api",
@@ -7,9 +31,7 @@
   },
   "host": "cse341-project-1-29rq.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
@@ -23,13 +45,9 @@
     },
     "/contacts/": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -37,34 +55,13 @@
         }
       },
       "post": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
             "name": "body",
             "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
+            "schema": { "$ref": "#/components/schemas/contact" }
           }
         ],
         "responses": {
@@ -79,13 +76,9 @@
     },
     "/contacts/{id}": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -101,9 +94,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -115,26 +106,7 @@
           {
             "name": "body",
             "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
+            "schema": { "$ref": "#/components/schemas/contact" }
           }
         ],
         "responses": {
@@ -147,9 +119,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
